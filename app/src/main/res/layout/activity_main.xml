@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.complexcalc.matheus.complexcalculator.MainActivity">
+
+    <EditText
+        android:id="@+id/screenText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="72dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="45dp"
+        android:ems="10"
+        android:hint="Insira a expressão aqui..."
+        android:inputType="textPersonName"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/sevenButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/screenText"
+        android:layout_marginLeft="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:text="7"
+        android:onClick="pressedNumberAction"
+        android:tag="7" />
+
+    <Button
+        android:id="@+id/eightButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:text="8"
+        android:layout_alignBaseline="@+id/sevenButton"
+        android:layout_alignBottom="@+id/sevenButton"
+        android:layout_toRightOf="@+id/sevenButton"
+        android:layout_toEndOf="@+id/sevenButton"
+        android:onClick="pressedNumberAction"
+        android:tag="8" />
+
+    <Button
+        android:id="@+id/nineButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/sevenButton"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_toEndOf="@+id/eightButton"
+        android:layout_toRightOf="@+id/eightButton"
+        android:text="9"
+        android:onClick="pressedNumberAction"
+        android:tag="9" />
+
+    <Button
+        android:id="@+id/fourButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/sevenButton"
+        android:layout_alignStart="@+id/sevenButton"
+        android:layout_below="@+id/eightButton"
+        android:layout_marginTop="20dp"
+        android:text="4"
+        android:onClick="pressedNumberAction"
+        android:tag="4" />
+
+    <Button
+        android:id="@+id/fiveButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/eightButton"
+        android:layout_alignStart="@+id/eightButton"
+        android:layout_alignTop="@+id/fourButton"
+        android:text="5"
+        android:onClick="pressedNumberAction"
+        android:tag="5" />
+
+    <Button
+        android:id="@+id/sixButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/fiveButton"
+        android:layout_alignLeft="@+id/nineButton"
+        android:layout_alignStart="@+id/nineButton"
+        android:text="6"
+        android:onClick="pressedNumberAction"
+        android:tag="6" />
+
+    <Button
+        android:id="@+id/oneButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="19dp"
+        android:text="1"
+        android:layout_below="@+id/fourButton"
+        android:layout_alignLeft="@+id/fourButton"
+        android:layout_alignStart="@+id/fourButton"
+        android:onClick="pressedNumberAction"
+        android:tag="1" />
+
+    <Button
+        android:id="@+id/twoButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/fiveButton"
+        android:layout_alignStart="@+id/fiveButton"
+        android:layout_alignTop="@+id/oneButton"
+        android:text="2"
+        android:onClick="pressedNumberAction"
+        android:tag="2" />
+
+    <Button
+        android:id="@+id/threeButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/sixButton"
+        android:layout_alignStart="@+id/sixButton"
+        android:layout_alignTop="@+id/twoButton"
+        android:text="3"
+        android:onClick="pressedNumberAction"
+        android:tag="3" />
+
+    <Button
+        android:id="@+id/divideButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/nineButton"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/nineButton"
+        android:layout_toRightOf="@+id/nineButton"
+        android:text="/"
+        android:onClick="pressedOperationAction"
+        android:tag="/"/>
+
+    <Button
+        android:id="@+id/multiplyButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/sixButton"
+        android:layout_alignLeft="@+id/divideButton"
+        android:layout_alignStart="@+id/divideButton"
+        android:text="*"
+        android:onClick="pressedOperationAction"
+        android:tag="*"/>
+
+    <Button
+        android:id="@+id/minusButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/threeButton"
+        android:layout_alignBottom="@+id/threeButton"
+        android:layout_alignLeft="@+id/multiplyButton"
+        android:layout_alignStart="@+id/multiplyButton"
+        android:text="-"
+        android:onClick="pressedOperationAction"
+        android:tag="-"/>
+
+    <Button
+        android:id="@+id/zeroButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/twoButton"
+        android:layout_alignLeft="@+id/oneButton"
+        android:layout_alignRight="@+id/twoButton"
+        android:layout_alignStart="@+id/oneButton"
+        android:layout_below="@+id/minusButton"
+        android:layout_marginTop="13dp"
+        android:text="0"
+        android:onClick="pressedNumberAction"
+        android:tag="0" />
+
+    <Button
+        android:id="@+id/dotButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/threeButton"
+        android:layout_alignStart="@+id/threeButton"
+        android:layout_alignTop="@+id/zeroButton"
+        android:text="."
+        android:onClick="pressedDotAction"/>
+
+    <Button
+        android:id="@+id/plusButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/minusButton"
+        android:layout_alignStart="@+id/minusButton"
+        android:layout_alignTop="@+id/dotButton"
+        android:text="+"
+        android:onClick="pressedOperationAction"
+        android:tag="+"/>
+
+    <Button
+        android:id="@+id/backspaceButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="M"
+        android:layout_alignTop="@+id/eightButton"
+        android:layout_toRightOf="@+id/screenText"
+        android:layout_toEndOf="@+id/screenText"
+        android:onClick="backspaceButtonAction"/>
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="C"
+        android:layout_alignBaseline="@+id/multiplyButton"
+        android:layout_alignBottom="@+id/multiplyButton"
+        android:layout_alignLeft="@+id/backspaceButton"
+        android:layout_alignStart="@+id/backspaceButton"
+        android:onClick="clearButtonAction"/>
+
+    <Button
+        android:id="@+id/equalButton"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:layout_alignLeft="@+id/clearButton"
+        android:layout_alignStart="@+id/clearButton"
+        android:layout_alignBottom="@+id/plusButton"
+        android:layout_alignTop="@+id/minusButton"
+        android:onClick="pressedOperationAction"
+        android:tag="="/>
+</RelativeLayout>

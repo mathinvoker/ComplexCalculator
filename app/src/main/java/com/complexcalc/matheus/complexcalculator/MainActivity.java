@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView screen = (TextView) findViewById(R.id.screenText);
         screen.setText("");
+        
     }
 
     public void backspaceButtonAction(View v){

@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         int n = 0;
         for(int i = 0; i < expression.length(); i++){
             if(expression.charAt(i) == tag)
-                n = n + 1;
+                n++;
         }
         return n;
     }
